@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+Below you'll find empty'ish html files with different ad-yield-managing companies' js loaded. It's built, so that I can test their impact on First Input Delay (FID).  They are loaded from the same server, so that uBlock doesn't block them (but block pretty much everything else that they import). This way I can isolate their impact on FID.
+
+Instructions:
+<ol>
+ <li> use Google Chrome
+ <li> have some adblock installed (I'm using uBlock) and activated in the incognito mode. The goal is to isolate the impact of your JS lib, so we want all the other ad-related libraries blocked.
+ <li> load this page in the incognito mode
+ <li> click on one of the links below, to load an empty page with that imports the ad js library from a given company
+ <li> open dev tools, go to the audits tab.
+ <li> run the audit. We're looking at (and only at) the Max Potential First Input Delay (it's in the performance report)
+</ol>
+Please note that I may not be importing everything that's needed in some cases, I simply looked at what's imported by those companies' clients' websites. I may havge made mistakes.
+
+Pages:
+<ul>
+<li><a href="aaa-empty.html">no javascript imported at all</a>
+<li><a href="adpushup.html">adpushup</a>
+<li><a href="adthrive.html">adthrive</a>
+<li><a href="freestar.html">freestar</a>
+<li><a href="sortable.html">sortable</a>
+<li><a href="yb.v2.local.html">yieldbird v2</a>
+<li><a href="yb.v3.local.html">yieldbird v3</a>
+</ul>
+
+</body>
+</html>
